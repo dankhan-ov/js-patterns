@@ -1,9 +1,5 @@
+// es6
 // Singleton - порождающий паттерн, гарантирующий, что у класса есть только 1 экземпляр.
-
-// 2 подхода к созданию singleton:
-// 1) Создать глобальную переменную, обращаться к ней; весь код завернуть в модуль 
-// 2) Определить singleton внутри объекта
-
 
 class Counter {
   constructor() {
@@ -16,11 +12,11 @@ class Counter {
   }
 
   getCount() {
-    return instance.count;
+    return this.count;
   }
 
   increaseCount() {
-    return instance.count++;
+    return this.count++;
   }
 };
 
